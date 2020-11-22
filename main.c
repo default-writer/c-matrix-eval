@@ -38,6 +38,7 @@ int main(void) {
       }
     }
   }
+  
   printf("\n");
   print_matrix(M);
   return 0;
