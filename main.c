@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void cmpxchng(int *a, int *b) {
+void swap(int *a, int *b) {
   int tmp = *a;
   *a = *b;
   *b = tmp;
@@ -31,10 +31,10 @@ int main(void) {
     min_j = &M[1][i];
     for (int j=0; j<4; j++) {
       if (M[j][i] > *max_j) {
-        cmpxchng(max_j, &M[j][i]);
+        swap(max_j, &M[j][i]);
       }
       if (M[j][i] < *min_j) {
-        cmpxchng(min_j, &M[j][i]);
+        swap(min_j, &M[j][i]);
       }
     }
   }
